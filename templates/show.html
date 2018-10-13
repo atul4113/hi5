@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Data</title>
+</head>
+<body>
+<h1 align="center">Welcome To Web Scraping</h1>
+<h2 align="center">Data will be scrapped from given "url"</h2>
+<h3 align="center">https://www.yellowpages.com/menus/los-angeles-ca/pasta</h3>
+<table align="center">
+    <tr>
+        <td>Store Name</td>
+        <td>Address</td>
+        <td>Phone</td>
+        <td>Img Path</td>
+    </tr>
+    <tr><td>Crispy Crust Hollywood Location</td>
+        <td>1253 Vine St, Los Angeles, CA 90038</td>
+        <td>(323) 645-5849</td>
+        <td>https://i2.ypcdn.com/blob/f9607c9269eec04d4347fb481503555deab697f0_50x50_crop.jpg?6f77d1c05d01a38aeab208b13d79bcaa</td>
+    </tr>
+</table>
+<form action="/scrap/" method="post">
+    <table align="center">
+        <tr>
+            <td><input type="submit" value="Save Scraped Data to DB"></td>
+        </tr>
+    </table>
+</form>
+<p align="center">{{ done }}</p>
+<h2 align="center">Show Data</h2>
+<form action="/viewall/" method="get">
+    <table align="center">
+        <tr>
+            <td><input type="submit" value="Show Scraped Data"></td>
+        </tr>
+    </table>
+</form>
+<table align="center" border="1">
+        <tr>
+        <th>S No.</th>
+        <th>Store Name</th>
+        <th>Address</th>
+        <th>Locality</th>
+        <th>Phone</th>
+        <th>Img Path</th>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{ x.id }}</td>
+            <td>{{ x.store_name }}</td>
+            <td>{{ x.address }}</td>
+            <td>{{ x.locality }}</td>
+            <td>{{ x.phone }}</td>
+            <td>{{ x.img_path }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

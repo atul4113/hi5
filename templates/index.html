@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+<h1 align="center">Welcome To Web Scraping</h1>
+<h2 align="center">Register</h2>
+<form action="/register/" method="post">
+    <table align="center">
+    <tr>
+        <td>User : </td>
+        <td><input type="text" name="uname" required></td>
+    </tr>
+    <tr>
+        <td>Password : </td>
+        <td><input type="password" name="upw" required></td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><input type="submit" value="Register"></td>
+    </tr>
+</table>
+</form>
+<p align="center">{{ msg }}</p>
+<h2 align="center">Login</h2>
+<form action="/login/" method="get">
+    <table align="center">
+    <tr>
+        <td>User : </td>
+        <td><input type="text" name="uname" required></td>
+    </tr>
+    <tr>
+        <td>Password : </td>
+        <td><input type="password" name="upw" required></td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"><input type="submit" value="login"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
