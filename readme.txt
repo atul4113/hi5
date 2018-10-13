@@ -1,5 +1,5 @@
 Dear sir,
-	Thanks, to give me a chance to elaborate on my skills.
+	Thanks, to give me a chance to elaborate my skills.
 
 	Before running the program install all dependencies.
 	1. First, run scrap.py 
